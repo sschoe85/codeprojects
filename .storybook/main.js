@@ -1,5 +1,4 @@
 module.exports = {
-  // You will want to change this to wherever your Stories will live.
   stories: ["../src/**/*.stories.js"],
   addons: ["@storybook/addon-actions", "@storybook/addon-links"],
   webpackFinal: async config => {
