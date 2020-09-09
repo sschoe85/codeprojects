@@ -1,6 +1,6 @@
 ---
 name: Section
-about: New sections
+about: New section
 title: ''
 labels: Section
 assignees: sschoe85

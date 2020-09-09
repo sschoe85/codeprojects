@@ -1,6 +1,6 @@
 ---
 name: Component
-about: New Components
+about: New component
 title: ''
 labels: Component
 assignees: sschoe85
