@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { useSpring, animated } from "react-spring"
 import styled from "@emotion/styled"
 
 function FaqCard(props) {
-  const CardFront = styled(animated.div)`
-    background-color: black;
-  `
-  const CardBack = styled(animated.div)`
-    background-color: green;
+  const Card = styled(animated.div)`
+    background-color: ${props => (props.front ? "hotpink" : "turquoise")};
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
   `
 
   const [flipped, setFlipped] = useState(false)
@@ -18,19 +17,20 @@ function FaqCard(props) {
   })
   return (
     <div onClick={() => setFlipped(!flipped)}>
-      <CardFront
+      <Card
+        front
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
       >
-        Hallo
-      </CardFront>
-      <CardBack
+        {props.question}
+      </Card>
+      <Card
         style={{
           opacity,
           transform: transform.interpolate(t => `${t} rotateX(180deg)`),
         }}
       >
-        Tschüss
-      </CardBack>
+        {props.answer}
+      </Card>
     </div>
   )
 }
