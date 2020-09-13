@@ -5,7 +5,7 @@ import FaqCard from "../components/FaqCard"
 function Faq(props) {
   
 
-  return <FaqCard/>
+  return <FaqCard question = "Hallo" answer = "Tschüss!"/>
 }
 
 export default Faq
