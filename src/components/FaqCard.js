@@ -9,6 +9,8 @@ function FaqCard(props) {
     font-weight: bold;
     color: white;
   `
+  const CardFrontContent = styled.div`
+  `
 
   const [flipped, setFlipped] = useState(false)
   const { transform, opacity } = useSpring({
@@ -17,20 +19,21 @@ function FaqCard(props) {
   })
   return (
     <div onClick={() => setFlipped(!flipped)}>
-      <Card
+      <CardFront
         front
         style={{ opacity: opacity.interpolate(o => 1 - o), transform }}
       >
-        {props.question}
-      </Card>
-      <Card
+        <CardFrontContent></CardFrontContent>
+      </CardFront>
+      <CardBack
         style={{
           opacity,
           transform: transform.interpolate(t => `${t} rotateX(180deg)`),
         }}
       >
-        {props.answer}
-      </Card>
+
+        <CardBackContent></CardBackContent>
+      </CardBack>
     </div>
   )
 }
