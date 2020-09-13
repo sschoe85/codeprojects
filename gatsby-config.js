@@ -12,6 +12,7 @@ module.exports = {
         path: `${__dirname}/src/pagecontent`
       }
     }, 
-    'gatsby-transformer-remark'
+    'gatsby-transformer-remark',
+    `gatsby-plugin-emotion`
   ],
 }
