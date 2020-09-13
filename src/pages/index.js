@@ -1,5 +1,6 @@
 import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
+import GlobalStyles from '../components/GlobalStyles';
 
 function IndexPage(props) {
     const data = useStaticQuery(graphql`
@@ -14,9 +15,10 @@ function IndexPage(props) {
     
     `)
     return (
-        <div>
+        <GlobalStyles>
+          <h1>Hallo</h1>
            {data.site.siteMetadata.title} 
-        </div>
+           </GlobalStyles>
     );
 }
 
