@@ -24,7 +24,8 @@
     "gatsby-transformer-remark": "^2.8.34",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "react-tsparticles": "^1.17.10"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

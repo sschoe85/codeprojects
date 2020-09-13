@@ -17,16 +17,14 @@ export default function Layout({ children }) {
             background: #111;
             color: #fff;
             font-family: "Solway", serif;
-            
-            
           }
           h1,
           h2,
           h3 {
             font-family: "Finger Paint", cursive;
-            
           }
-          
+          #tsparticles {
+          }
         `}
       />
       {children}
