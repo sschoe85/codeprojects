@@ -1,7 +1,7 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
 
-export default function Layout({ children }) {
+export default function GlobalStyles({ children }) {
   return (
     <div>
       <Global
@@ -12,6 +12,8 @@ export default function Layout({ children }) {
           *:before,
           *:after {
             box-sizing: border-box;
+            padding: 0;
+            margin: 5px;
           }
           html {
             background: #111;
