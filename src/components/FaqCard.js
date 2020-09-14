@@ -6,6 +6,8 @@ function FaqCard(props) {
   const Card = styled.div`
     display: grid;
     grid-column: span 4;
+    text-align: center;
+
   `
   const CardFront = styled(animated.div)`
     display: flex;
@@ -17,6 +19,7 @@ function FaqCard(props) {
     );
     cursor: pointer;
     color: white;
+    padding: 1rem;
   `
   const CardBack = styled(animated.div)`
     display: flex;

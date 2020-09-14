@@ -13,7 +13,7 @@ export default function GlobalStyles({ children }) {
           *:after {
             box-sizing: border-box;
             padding: 0;
-            margin: 0;
+            margin: 5px;
           }
           html {
             background: #111;
