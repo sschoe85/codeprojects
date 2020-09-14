@@ -7,7 +7,6 @@ function FaqCard(props) {
     display: grid;
     grid-column: span 4;
     text-align: center;
-
   `
   const CardFront = styled(animated.div)`
     display: flex;
@@ -24,7 +23,11 @@ function FaqCard(props) {
   const CardBack = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image:linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    background-image: linear-gradient(
+      0deg,
+      rgba(34, 193, 195, 1) 0%,
+      rgba(253, 187, 45, 1) 100%
+    );
   `
 
   const [flipped, setFlipped] = useState(false)
@@ -46,7 +49,6 @@ function FaqCard(props) {
           transform: transform.interpolate(t => `${t} rotateX(180deg)`),
         }}
       >
-        
         <p>{props.answer}</p>
       </CardBack>
     </Card>
