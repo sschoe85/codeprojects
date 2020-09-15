@@ -1,7 +1,6 @@
 import styled from "@emotion/styled"
-import React from "react"
 
-const Button = styled.button`
+const CalltoActionButton = styled.button`
   border: solid 3px transparent;
   border-radius: 100rem;
   background-image: linear-gradient(
@@ -29,10 +28,6 @@ const Button = styled.button`
 `
 
 
-function CalltoActionButton(props) {
- return(
-   <Button>{props.children}</Button>
- )
-}
+
 
 export default CalltoActionButton
