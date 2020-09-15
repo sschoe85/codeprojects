@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useSpring, animated } from "react-spring"
 import styled from "@emotion/styled"
+import { colors } from "../utils/theme"
 
 function FaqCard(props) {
   const Card = styled.div`
@@ -11,11 +12,7 @@ function FaqCard(props) {
   const CardFront = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(
-      90deg,
-      rgba(63, 94, 251, 1) 0%,
-      rgba(252, 70, 107, 1) 100%
-    );
+    background-image: ${colors.gradient};
     cursor: pointer;
     color: white;
     padding: 1rem;
@@ -23,11 +20,7 @@ function FaqCard(props) {
   const CardBack = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(
-      0deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
-    );
+    background-image: ${colors.gradientsecondary};
   `
 
   const [flipped, setFlipped] = useState(false)
