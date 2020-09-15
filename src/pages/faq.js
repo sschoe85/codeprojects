@@ -24,8 +24,10 @@ import PageLayout from "../components/PageLayout"
 function Faq(props) {
 
   return (
-    <GlobalStyles>
-      <PageLayout>
+
+    <div>
+    <GlobalStyles/>
+
       <FaqSection>
         <FaqCard question="Wie geht's?" answer="Super!" />
         <FaqCard
@@ -37,8 +39,8 @@ function Faq(props) {
         <FaqCard question = "Hallo Hallo Hallo Hallo"/>
         <FaqCard />
       </FaqSection>
-      </PageLayout>
-    </GlobalStyles>
+      </div>
+
   )
 }
 

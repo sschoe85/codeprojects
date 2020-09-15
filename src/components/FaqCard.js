@@ -11,11 +11,7 @@ import styled from "@emotion/styled"
   const CardFront = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(
-      90deg,
-      rgba(63, 94, 251, 1) 0%,
-      rgba(252, 70, 107, 1) 100%
-    );
+    background-image: var(--gradient);
     cursor: pointer;
     color: white;
     padding: 1rem;
@@ -26,14 +22,11 @@ import styled from "@emotion/styled"
   const CardBack = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(
-      0deg,
-      rgba(34, 193, 195, 1) 0%,
-      rgba(253, 187, 45, 1) 100%
-    );
+    background-image: var(--gradientSecondary);
     position: absolute;
     width: 100%;
     height: 100%;
+
   `
 function FaqCard(props) {
 
