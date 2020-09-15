@@ -1,6 +1,7 @@
 import React from 'react';
 import {graphql, useStaticQuery} from "gatsby";
 import GlobalStyles from '../components/GlobalStyles';
+import CalltoActionButton from '../components/CalltoActionButton';
 
 function IndexPage(props) {
     const data = useStaticQuery(graphql`
@@ -15,10 +16,12 @@ function IndexPage(props) {
     
     `)
     return (
-        <GlobalStyles>
-          <h1>Hallo</h1>
-           {data.site.siteMetadata.title} 
-           </GlobalStyles>
+      <div>
+        <GlobalStyles/>
+          
+           <CalltoActionButton size = "small">Test</CalltoActionButton>
+           <CalltoActionButton>Noch ein Test</CalltoActionButton>
+           </div>
     );
 }
 
