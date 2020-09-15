@@ -2,11 +2,11 @@ import React, { useState } from "react"
 import { useSpring, animated } from "react-spring"
 import styled from "@emotion/styled"
 
-function FaqCard(props) {
   const Card = styled.div`
-    display: grid;
-    grid-column: span 4;
     text-align: center;
+    position: relative;
+    height: 300px;
+    min-width: 300px;
   `
   const CardFront = styled(animated.div)`
     display: flex;
@@ -19,6 +19,9 @@ function FaqCard(props) {
     cursor: pointer;
     color: white;
     padding: 1rem;
+    position: absolute;
+    width: 100%;
+    height: 100%;
   `
   const CardBack = styled(animated.div)`
     display: flex;
@@ -28,7 +31,11 @@ function FaqCard(props) {
       rgba(34, 193, 195, 1) 0%,
       rgba(253, 187, 45, 1) 100%
     );
+    position: absolute;
+    width: 100%;
+    height: 100%;
   `
+function FaqCard(props) {
 
   const [flipped, setFlipped] = useState(false)
   const { transform, opacity } = useSpring({
