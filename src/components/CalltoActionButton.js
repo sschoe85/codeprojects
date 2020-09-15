@@ -1,16 +1,42 @@
 import styled from "@emotion/styled"
-//Gets passed a prop LinkTo that leads to the desired section, exists in two different styles based on its props (https://emotion.sh/docs/styled)
-
 import React from "react"
 
-const ButtonSmall = styled(ButtonLarge)``
-const ButtonLarge = styled.button``
+const ButtonLarge = styled.button`
+  border: solid 3px transparent;
+  border-radius: 100rem;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0)
+    ),
+    linear-gradient(101deg, #78e4ff, #ff48fa);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 0.5rem 3rem;
+  box-shadow: 2px 1000px 1px #111 inset;
+  color: white;
+  font-family: inherit;
 
-function CalltoActionButton(size, linkTo) {
+  & :hover {
+    animation: pulse 3s;
+    box-shadow: 0 0 0 2em rgba(#fff, 0);
+  }
+
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 var(--gradient);
+    }
+  }
+`
+
+const ButtonSmall = styled(ButtonLarge)`
+  padding: 0.3rem 1rem;
+`
+
+function CalltoActionButton(props) {
   if (props.size === "small") {
-    return <ButtonSmall onClick={handleClick}></ButtonSmall>
+    return <ButtonSmall>{props.children}</ButtonSmall>
   } else {
-    return <ButtonLarge onClick={handleClick}></ButtonLarge>
+    return <ButtonLarge>{props.children}</ButtonLarge>
   }
 }
 
