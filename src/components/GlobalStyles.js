@@ -1,9 +1,9 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
 
-export default function GlobalStyles({ children }) {
+export default function GlobalStyles() {
   return (
-    <div>
+    
       <Global
         styles={css`
           @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
@@ -19,6 +19,8 @@ export default function GlobalStyles({ children }) {
             background: #111;
             color: #fff;
             font-family: "Solway", serif;
+            --gradient: linear-gradient(101deg, #78e4ff, #ff48fa);
+            --gradientSecondary: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
             
             
           }
@@ -28,10 +30,9 @@ export default function GlobalStyles({ children }) {
             font-family: "Finger Paint", cursive;
             
           }
+
           
         `}
       />
-      {children}
-    </div>
   )
 }

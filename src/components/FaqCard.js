@@ -12,7 +12,7 @@ function FaqCard(props) {
   const CardFront = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image: ${colors.gradient};
+    background-image: var(--gradient);
     cursor: pointer;
     color: white;
     padding: 1rem;
@@ -20,7 +20,7 @@ function FaqCard(props) {
   const CardBack = styled(animated.div)`
     display: flex;
     flex-direction: column;
-    background-image: ${colors.gradientsecondary};
+    background-image: var(--gradientSecondary);
   `
 
   const [flipped, setFlipped] = useState(false)

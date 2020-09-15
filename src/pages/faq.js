@@ -19,7 +19,8 @@ function Faq(props) {
   `
 
   return (
-    <GlobalStyles>
+    <div>
+    <GlobalStyles/>
       <FaqSection>
         <FaqCard question="Wie geht's?" answer="Super!" />
         <FaqCard
@@ -31,7 +32,7 @@ function Faq(props) {
         <FaqCard />
         <FaqCard />
       </FaqSection>
-    </GlobalStyles>
+      </div>
   )
 }
 
