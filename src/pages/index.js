@@ -18,9 +18,9 @@ function IndexPage(props) {
     return (
       <div>
         <GlobalStyles/>
-          <h1>Hallo</h1>
-           {data.site.siteMetadata.title} 
+          
            <CalltoActionButton size = "small">Test</CalltoActionButton>
+           <CalltoActionButton>Noch ein Test</CalltoActionButton>
            </div>
     );
 }
