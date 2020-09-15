@@ -1,11 +1,12 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
 
-export default function GlobalStyles({ children }) {
+export default function GlobalStyles() {
   return (
 
     <Global
       styles={css`
+
         @import url("https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&family=Finger+Paint&display=swap");
 
         :root {
