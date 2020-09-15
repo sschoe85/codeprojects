@@ -2,8 +2,8 @@ import React from "react"
 import GlobalStyles from "../components/GlobalStyles"
 import FaqCard from "../components/FaqCard"
 import styled from "@emotion/styled"
+import PageLayout from "../components/PageLayout"
 
-function Faq(props) {
   const FaqSection = styled.section`
     display: grid;
     grid-template-columns: repeat(4, minmax(auto, 60px));
@@ -16,11 +16,18 @@ function Faq(props) {
     grid-gap: 40px;
     align-items: center;
     justify-content: center;
+
+    & *{
+      grid-column: span 4;
+    }
   `
+function Faq(props) {
 
   return (
+
     <div>
     <GlobalStyles/>
+
       <FaqSection>
         <FaqCard question="Wie geht's?" answer="Super!" />
         <FaqCard
@@ -29,10 +36,11 @@ function Faq(props) {
         />
         <FaqCard />
         <FaqCard question="Test" answer="Test" />
-        <FaqCard />
+        <FaqCard question = "Hallo Hallo Hallo Hallo"/>
         <FaqCard />
       </FaqSection>
       </div>
+
   )
 }
 

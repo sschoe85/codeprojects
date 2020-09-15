@@ -3,6 +3,7 @@ import { Global, css } from "@emotion/core"
 
 export default function GlobalStyles() {
   return (
+
     <Global
       styles={css`
         @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
@@ -36,5 +37,6 @@ export default function GlobalStyles() {
         }
       `}
     />
+
   )
 }
