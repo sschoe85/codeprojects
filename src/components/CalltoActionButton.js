@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import React from "react"
 
-const ButtonLarge = styled.button`
+const Button = styled.button`
   border: solid 3px transparent;
   border-radius: 100rem;
   background-image: linear-gradient(
@@ -11,10 +11,10 @@ const ButtonLarge = styled.button`
     linear-gradient(101deg, #78e4ff, #ff48fa);
   background-origin: border-box;
   background-clip: content-box, border-box;
-  padding: 0.5rem 3rem;
   box-shadow: 2px 1000px 1px #111 inset;
   color: white;
   font-family: inherit;
+  padding: ${(props) => props.size === 'small' ? '0.3rem 1rem' : '0.5rem 3rem'};
 
   & :hover {
     animation: pulse 3s;
@@ -28,16 +28,11 @@ const ButtonLarge = styled.button`
   }
 `
 
-const ButtonSmall = styled(ButtonLarge)`
-  padding: 0.3rem 1rem;
-`
 
 function CalltoActionButton(props) {
-  if (props.size === "small") {
-    return <ButtonSmall>{props.children}</ButtonSmall>
-  } else {
-    return <ButtonLarge>{props.children}</ButtonLarge>
-  }
+ return(
+   <Button>{props.children}</Button>
+ )
 }
 
 export default CalltoActionButton

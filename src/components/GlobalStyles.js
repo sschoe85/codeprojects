@@ -6,8 +6,7 @@ export default function GlobalStyles({ children }) {
 
     <Global
       styles={css`
-        @import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
-        @import url("https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&family=Finger+Paint&display=swap");
 
         :root {
           --gradient: linear-gradient(101deg, #78e4ff, #ff48fa);
