@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import { useSpring, animated } from "react-spring"
 import styled from "@emotion/styled"
-import { colors } from "../utils/theme"
 
 function FaqCard(props) {
   const Card = styled.div`
