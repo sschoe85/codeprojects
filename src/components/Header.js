@@ -48,40 +48,31 @@ const Header = props => {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
   })
-
+  let TheOneandOnlyTrueHeader;
   if (!scrolled) {
-    return (
-      <StyledHeader>
-        <HeaderElement>
-          <Link to="">
-            <img src={MenuIcon} alt="Menu" />
-          </Link>
-        </HeaderElement>
-        <HeaderElement>
-          <Link to="">Logo</Link>
-        </HeaderElement>
-        <HeaderElement>
-          <Link to="">Site in English</Link>
-        </HeaderElement>
-      </StyledHeader>
-    )
-  } else {
-    return (
-      <StyledScrolledHeader>
-        <HeaderElement>
-          <Link to="">
-            <img src={MenuIcon} alt="Menu" />
-          </Link>
-        </HeaderElement>
-        <HeaderElement>
-          <Link to="">Logo</Link>
-        </HeaderElement>
-        <HeaderElement>
-          <Link to="">Site in English</Link>
-        </HeaderElement>
-      </StyledScrolledHeader>
-    )
+    TheOneandOnlyTrueHeader = StyledHeader;
   }
-}
+  else {
+    TheOneandOnlyTrueHeader = StyledScrolledHeader;
+  }
+    return (
+      <TheOneandOnlyTrueHeader>
+        <HeaderElement>
+          <Link to="">
+            <img src={MenuIcon} alt="Menu" />
+          </Link>
+        </HeaderElement>
+        <HeaderElement>
+          <Link to="">Logo</Link>
+        </HeaderElement>
+        <HeaderElement>
+          <Link to="">Site in English</Link>
+        </HeaderElement>
+        </TheOneandOnlyTrueHeader>
+    )
+  } 
 export default Header

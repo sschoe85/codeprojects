@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-const StyledButton = styled.button`
+const Button = styled.button`
   border: solid 3px transparent;
   border-radius: 100rem;
   background-image: linear-gradient(
@@ -27,4 +27,4 @@ const StyledButton = styled.button`
   }
 `
 
-export default StyledButton
+export default Button
