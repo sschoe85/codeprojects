@@ -19,7 +19,7 @@ const StyledScrolledHeader = styled(StyledHeader)`
   left: 0;
   z-index: 999;
 `
-const HeaderElement = styled.nav`
+const HeaderElement = styled.div`
   padding: 0.7rem 0.2rem;
   display: flex;
   margin: 0 1rem;
