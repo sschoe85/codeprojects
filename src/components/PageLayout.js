@@ -6,11 +6,11 @@ import Footer from './Footer';
 
 function PageLayout(props) {
     return (
-        <div>
+        <>
             <Header/>
             {props.children}
             <Footer/>
-        </div>
+        </>
             
         
     );
