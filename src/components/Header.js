@@ -37,42 +37,39 @@ const HeaderElement = styled.div`
 
 const Header = props => {
   const [scrolled, setScrolled] = React.useState(false)
-  const handleScroll = () => {
-    const offset = window.scrollY
-    if (offset > 200) {
-      setScrolled(true)
-    } else {
-      setScrolled(false)
-    }
-  }
 
   useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY
+      if (offset > 200) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
     window.addEventListener("scroll", handleScroll)
     return () => {
       window.removeEventListener("scroll", handleScroll)
     }
-  })
-  let TheOneandOnlyTrueHeader;
-  if (!scrolled) {
-    TheOneandOnlyTrueHeader = StyledHeader;
-  }
-  else {
-    TheOneandOnlyTrueHeader = StyledScrolledHeader;
-  }
-    return (
-      <TheOneandOnlyTrueHeader>
-        <HeaderElement>
-          <Link to="">
-            <img src={MenuIcon} alt="Menu" />
-          </Link>
-        </HeaderElement>
-        <HeaderElement>
-          <Link to="">Logo</Link>
-        </HeaderElement>
-        <HeaderElement>
-          <Link to="">Site in English</Link>
-        </HeaderElement>
-        </TheOneandOnlyTrueHeader>
-    )
-  } 
+  }, [])
+  let TheOneandOnlyTrueHeader = !scrolled
+    ? StyledHeader
+    : StyledScrolledHeader
+ 
+  return (
+    <TheOneandOnlyTrueHeader>
+      <HeaderElement>
+        <Link to="">
+          <img src={MenuIcon} alt="Menu" />
+        </Link>
+      </HeaderElement>
+      <HeaderElement>
+        <Link to="">Logo</Link>
+      </HeaderElement>
+      <HeaderElement>
+        <Link to="">Site in English</Link>
+      </HeaderElement>
+    </TheOneandOnlyTrueHeader>
+  )
+}
 export default Header
