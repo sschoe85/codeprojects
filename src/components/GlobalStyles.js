@@ -3,10 +3,8 @@ import { Global, css } from "@emotion/core"
 
 export default function GlobalStyles() {
   return (
-
     <Global
       styles={css`
-
         @import url("https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&family=Finger+Paint&display=swap");
 
         :root {
@@ -18,7 +16,7 @@ export default function GlobalStyles() {
         *:after {
           box-sizing: border-box;
           padding: 0;
-          margin: 5px;
+          margin: 0;
         }
         html {
           background: #111;
@@ -33,6 +31,5 @@ export default function GlobalStyles() {
         }
       `}
     />
-
   )
 }

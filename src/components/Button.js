@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-const CalltoActionButton = styled.button`
+const Button = styled.button`
   border: solid 3px transparent;
   border-radius: 100rem;
   background-image: linear-gradient(
@@ -13,7 +13,7 @@ const CalltoActionButton = styled.button`
   box-shadow: 2px 1000px 1px #111 inset;
   color: white;
   font-family: inherit;
-  padding: ${(props) => props.size === 'small' ? '0.3rem 1rem' : '0.5rem 3rem'};
+  padding: ${props => (props.size === "small" ? "0.3rem 1rem" : "0.5rem 3rem")};
 
   & :hover {
     animation: pulse 3s;
@@ -27,7 +27,4 @@ const CalltoActionButton = styled.button`
   }
 `
 
-
-
-
-export default CalltoActionButton
+export default Button
