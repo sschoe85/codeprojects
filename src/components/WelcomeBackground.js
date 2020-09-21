@@ -9,24 +9,31 @@ function WelcomeBackground(props) {
     width: 100vw;
     height: 90vh;
     position: relative;
-    & > * {
-      position: absolute;
-    }
+    display: flex;
+    justify-content: center;
+  `
+  const WelcmeContainer = styled.div`
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: transparent;
+
+    top: 20%;
+
     & > h1 {
-      top: 30%;
-      left: 30%;
-    }
-    & > button {
-      top: 50%;
-      left: 40%;
-      z-index: 2;
+      text-align: center;
+      margin-bottom: 5vh;
+      font-size: calc(2.8rem + 1vw);
     }
   `
-
   return (
     <ParticlesContainer>
-      <h1>My little coding school</h1>
-      <Button>Hallo</Button>
+      <WelcmeContainer>
+        <h1>CodeProjects @ GISNY </h1>
+        <Button> Activities</Button>
+      </WelcmeContainer>
       <Particles
         width="100vw"
         height="100vh"
