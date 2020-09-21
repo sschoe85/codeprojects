@@ -2,19 +2,31 @@ import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import React from "react"
 import Particles from "react-tsparticles"
+import Button from "./Button"
 
 function WelcomeBackground(props) {
   const ParticlesContainer = styled.div`
     width: 100vw;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    height: 90vh;
+    position: relative;
+    & > * {
+      position: absolute;
+    }
+    & > h1 {
+      top: 30%;
+      left: 30%;
+    }
+    & > button {
+      top: 50%;
+      left: 40%;
+      z-index: 2;
+    }
   `
 
   return (
     <ParticlesContainer>
-      {props.children}
+      <h1>My little coding school</h1>
+      <Button>Hallo</Button>
       <Particles
         width="100vw"
         height="100vh"
