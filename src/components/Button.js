@@ -14,7 +14,7 @@ const Button = styled.button`
   color: white;
   font-family: inherit;
   padding: ${props => (props.size === "small" ? "0.3rem 1rem" : "0.5rem 3rem")};
-
+  font-size: calc(1.4rem + 1.5vw);
   & :hover {
     animation: pulse 3s;
     box-shadow: 0 0 0 2em rgba(#fff, 0);
