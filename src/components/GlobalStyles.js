@@ -29,6 +29,12 @@ export default function GlobalStyles() {
         h3 {
           font-family: "Finger Paint", cursive;
         }
+        p {
+          text-align: justify;
+          margin: 1.8rem;
+          font-size: 1.3rem;
+          overflow-x: auto;
+        }
       `}
     />
   )
