@@ -2,7 +2,6 @@ import React from "react"
 import GlobalStyles from "../components/GlobalStyles"
 import FaqCard from "../components/FaqCard"
 import styled from "@emotion/styled"
-import PageLayout from "../components/PageLayout"
 
 const FaqSection = styled.section`
   display: grid;
@@ -28,6 +27,7 @@ function Faq(props) {
 
       <FaqSection>
         <FaqCard question="Codeprojects Junior" answer="Details" />
+        <FaqCard question= "Click Cards to see more!" answer= "You found the Easter Egg :-)"/>
         <FaqCard question="Codeprojects Senior" answer="Details" />
       </FaqSection>
     </div>
