@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/Header"
 import Welcome from "../sections/Welcome"
+import SectionHeader from "../components/SectionHeader"
 
 function IndexPage(props) {
   const data = useStaticQuery(graphql`
@@ -19,7 +20,7 @@ function IndexPage(props) {
       <GlobalStyles />
       <Header />
       <Welcome />
-
+      <SectionHeader>Activities</SectionHeader>
       <p>
         {" "}
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
