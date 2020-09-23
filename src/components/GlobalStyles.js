@@ -36,7 +36,8 @@ export default function GlobalStyles() {
           overflow-x: auto;
         }
         section {
-          margin-top: 3rem;
+          margin: 3rem 0rem;
+          
         }
       `}
     />
