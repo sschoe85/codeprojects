@@ -4,6 +4,7 @@ import GlobalStyles from "../components/GlobalStyles"
 import Header from "../components/Header"
 import Welcome from "../sections/Welcome"
 import Activities from "../sections/Activities"
+import AboutMe from "../sections/AboutMe"
 
 function IndexPage(props) {
   const data = useStaticQuery(graphql`
@@ -21,6 +22,7 @@ function IndexPage(props) {
       <Header />
       <Welcome />
       <Activities></Activities>
+      <AboutMe></AboutMe>
     </div>
   )
 }

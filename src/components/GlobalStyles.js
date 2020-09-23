@@ -35,6 +35,9 @@ export default function GlobalStyles() {
           font-size: 1.3rem;
           overflow-x: auto;
         }
+        section {
+          margin-top: 3rem;
+        }
       `}
     />
   )
