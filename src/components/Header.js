@@ -52,10 +52,8 @@ const Header = props => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-  let TheOneandOnlyTrueHeader = !scrolled
-    ? StyledHeader
-    : StyledScrolledHeader
- 
+  let TheOneandOnlyTrueHeader = !scrolled ? StyledHeader : StyledScrolledHeader
+
   return (
     <TheOneandOnlyTrueHeader>
       <HeaderElement>
@@ -64,10 +62,10 @@ const Header = props => {
         </Link>
       </HeaderElement>
       <HeaderElement>
-        <Link to="">Logo</Link>
+        <Link to="/faq">FAQ</Link>
       </HeaderElement>
       <HeaderElement>
-        <Link to="">Site in English</Link>
+        <Link to="">Site in German</Link>
       </HeaderElement>
     </TheOneandOnlyTrueHeader>
   )
