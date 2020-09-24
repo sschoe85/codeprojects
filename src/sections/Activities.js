@@ -2,16 +2,15 @@ import styled from "@emotion/styled"
 import React from "react"
 import CardSection from "./CardSection"
 
+const SectionActivities = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
 function Activities(props) {
-  const SectionActivities = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  `
-
   return (
-    <SectionActivities>
+    <SectionActivities id="Activities">
       <CardSection section="Activities" />
     </SectionActivities>
   )

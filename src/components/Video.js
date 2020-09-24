@@ -1,8 +1,8 @@
-import styled from "@emotion/styled"
 import React from "react"
 
-const Video = ({ videoSrcURL, width, height }) => (
+const Video = ({ videoSrcURL, width, height, title }) => (
   <iframe
+  title={title}
     width={width}
     height={height}
     src={videoSrcURL}
