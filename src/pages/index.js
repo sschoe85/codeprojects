@@ -16,6 +16,8 @@ function IndexPage(props) {
       }
     }
   `)
+  
+
   return (
     <PageLayout>
       <Welcome />
