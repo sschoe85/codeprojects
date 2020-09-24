@@ -1,10 +1,10 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import GlobalStyles from "../components/GlobalStyles"
-import Header from "../components/Header"
 import Welcome from "../sections/Welcome"
 import Activities from "../sections/Activities"
 import AboutMe from "../sections/AboutMe"
+import PageLayout from "../components/PageLayout"
+
 
 function IndexPage(props) {
   const data = useStaticQuery(graphql`
@@ -17,13 +17,11 @@ function IndexPage(props) {
     }
   `)
   return (
-    <div>
-      <GlobalStyles />
-      <Header />
+    <PageLayout>
       <Welcome />
       <Activities></Activities>
       <AboutMe></AboutMe>
-    </div>
+      </PageLayout>
   )
 }
 
