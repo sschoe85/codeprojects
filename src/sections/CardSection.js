@@ -4,6 +4,13 @@ import styled from "@emotion/styled"
 import SectionHeader from "../components/SectionHeader"
 import { graphql, useStaticQuery } from "gatsby"
 
+const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(4, minmax(auto, 60px));
@@ -45,7 +52,7 @@ function CardSection({ section }) {
     .map(edge => edge.node)
     .filter(node => node.frontmatter.section === section)
   return (
-    <>
+    <SectionContainer>
       <SectionHeader>{section}</SectionHeader>
       <Section>
         {nodes.map(node => (
@@ -56,7 +63,7 @@ function CardSection({ section }) {
           />
         ))}
       </Section>
-    </>
+    </SectionContainer>
   )
 }
 

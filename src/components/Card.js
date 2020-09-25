@@ -26,6 +26,7 @@ const Back = styled(animated.div)`
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 2rem;
 `
 
 function Card({ front, back }) {
