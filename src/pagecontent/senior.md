@@ -1,5 +1,5 @@
 ---
-title: Codeprojects Senior
+front: Codeprojects Senior
 section: Activities
 ---
 

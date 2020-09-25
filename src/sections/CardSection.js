@@ -30,8 +30,9 @@ function CardSection({ section }) {
       allMarkdownRemark {
         edges {
           node {
+            html
             frontmatter {
-              title
+              front
               section
             }
           }
@@ -39,18 +40,19 @@ function CardSection({ section }) {
       }
     }
   `)
-  const frontmatterItems = edges
-    .map(edge => edge.node.frontmatter)
-    .filter(frontMatterItem => frontMatterItem.section === section)
+
+  const nodes = edges
+    .map(edge => edge.node)
+    .filter(node => node.frontmatter.section === section)
   return (
     <>
       <SectionHeader>{section}</SectionHeader>
       <Section>
-        {frontmatterItems.map(frontmatterItem => (
+        {nodes.map(node => (
           <Card
-            key={frontmatterItem.title}
-            front={frontmatterItem.title}
-            back=""
+            key={node.frontmatter.front}
+            front={node.frontmatter.front}
+            back={{ __html: `${node.html}` }}
           />
         ))}
       </Section>

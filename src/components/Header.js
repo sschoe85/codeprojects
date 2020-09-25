@@ -57,9 +57,7 @@ const Header = props => {
   return (
     <TheOneandOnlyTrueHeader>
       <HeaderElement>
-        <Link to="">
-          <img src={MenuIcon} alt="Menu" />
-        </Link>
+        <a href="https://www.gisny.org">GISNY</a>
       </HeaderElement>
       <HeaderElement>
         <Link to="/faq">FAQ</Link>

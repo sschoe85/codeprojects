@@ -46,7 +46,7 @@ function Card({ front, back }) {
           transform: transform.interpolate(t => `${t} rotateX(180deg)`),
         }}
       >
-        <p>{back}</p>
+        <div dangerouslySetInnerHTML={back}></div>
       </Back>
     </Container>
   )

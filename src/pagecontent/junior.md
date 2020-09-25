@@ -1,5 +1,5 @@
 ---
-title: Codeprojects Junior
+front: Codeprojects Junior
 section: Activities
 ---
 
