@@ -22,6 +22,7 @@ export default function GlobalStyles() {
           background: #111;
           color: #fff;
           font-family: "Solway", serif;
+          scroll-behavior: smooth;
         }
 
         h1,
@@ -37,7 +38,6 @@ export default function GlobalStyles() {
         }
         section {
           margin: 3rem 0rem;
-          
         }
       `}
     />
