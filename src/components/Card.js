@@ -26,6 +26,7 @@ const Back = styled(animated.div)`
   position: absolute;
   width: 100%;
   height: 100%;
+  padding: 2rem;
 `
 
 function Card({ front, back }) {
@@ -46,7 +47,7 @@ function Card({ front, back }) {
           transform: transform.interpolate(t => `${t} rotateX(180deg)`),
         }}
       >
-        <p>{back}</p>
+        <div dangerouslySetInnerHTML={back}></div>
       </Back>
     </Container>
   )

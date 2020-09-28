@@ -3,18 +3,7 @@ import React from "react"
 import CardSection from "./CardSection"
 
 function Activities(props) {
-  const SectionActivities = styled.section`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  `
-
-  return (
-    <SectionActivities>
-      <CardSection section="Activities" />
-    </SectionActivities>
-  )
+  return <CardSection section="Activities" id="Activities" />
 }
 
 export default Activities

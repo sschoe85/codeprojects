@@ -4,6 +4,13 @@ import styled from "@emotion/styled"
 import SectionHeader from "../components/SectionHeader"
 import { graphql, useStaticQuery } from "gatsby"
 
+const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
 const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(4, minmax(auto, 60px));
@@ -30,8 +37,9 @@ function CardSection({ section }) {
       allMarkdownRemark {
         edges {
           node {
+            html
             frontmatter {
-              title
+              front
               section
             }
           }
@@ -39,22 +47,23 @@ function CardSection({ section }) {
       }
     }
   `)
-  const frontmatterItems = edges
-    .map(edge => edge.node.frontmatter)
-    .filter(frontMatterItem => frontMatterItem.section === section)
+
+  const nodes = edges
+    .map(edge => edge.node)
+    .filter(node => node.frontmatter.section === section)
   return (
-    <>
+    <SectionContainer>
       <SectionHeader>{section}</SectionHeader>
       <Section>
-        {frontmatterItems.map(frontmatterItem => (
+        {nodes.map(node => (
           <Card
-            key={frontmatterItem.title}
-            front={frontmatterItem.title}
-            back=""
+            key={node.frontmatter.front}
+            front={node.frontmatter.front}
+            back={{ __html: `${node.html}` }}
           />
         ))}
       </Section>
-    </>
+    </SectionContainer>
   )
 }
 
