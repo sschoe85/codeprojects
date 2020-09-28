@@ -27,14 +27,19 @@ export default function GlobalStyles() {
 
         h1,
         h2,
-        h3 {
+        h3,
+        h4 {
           font-family: "Finger Paint", cursive;
+          text-align: center;
         }
         p {
           text-align: justify;
           margin: 1.8rem;
           font-size: 1.3rem;
           overflow-x: auto;
+        }
+        li {
+          margin: 1rem;
         }
         section {
           margin: 3rem 0rem;

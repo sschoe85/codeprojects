@@ -27,6 +27,8 @@ const Back = styled(animated.div)`
   width: 100%;
   height: 100%;
   padding: 2rem;
+  color: black;
+  overflow: scroll;
 `
 
 function Card({ front, back }) {
@@ -39,7 +41,7 @@ function Card({ front, back }) {
   return (
     <Container onClick={() => setFlipped(!flipped)}>
       <Front style={{ opacity: opacity.interpolate(o => 1 - o), transform }}>
-        <h2>{front}</h2>
+        <div dangerouslySetInnerHTML={front}></div>
       </Front>
       <Back
         style={{

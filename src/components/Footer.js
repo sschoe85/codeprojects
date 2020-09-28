@@ -27,13 +27,13 @@ function Footer(props) {
   return (
     <StyledFooter>
       <FooterElement>
-        <Link to="">Privacy policy</Link>
+        <Link to="/privacypolicy">Privacy policy</Link>
       </FooterElement>
       <FooterElement>
         <a href="mailto:info@code-projects.de">Get in Touch!</a>
       </FooterElement>
       <FooterElement>
-        <Link to="">Legal Notice</Link>
+        <Link to="/disclaimer">Disclaimer</Link>
       </FooterElement>
     </StyledFooter>
   )

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
 import React, { useEffect } from "react"
-import MenuIcon from "../assets/hamburgerMenuIcon.png"
+import HomeIcon from "../assets/homeIcon.svg"
 
 const StyledHeader = styled.header`
   width: 100vw;
@@ -31,7 +31,7 @@ const HeaderElement = styled.div`
     font-size: calc(1rem + 1vw);
   }
   & > a > img {
-    height: 8vh;
+    height: 4vh;
   }
 `
 
@@ -57,13 +57,15 @@ const Header = props => {
   return (
     <TheOneandOnlyTrueHeader>
       <HeaderElement>
-        <a href="https://www.gisny.org">GISNY</a>
+        <Link to="/">
+          <img src={HomeIcon} alt="Home Icon" />{" "}
+        </Link>
       </HeaderElement>
       <HeaderElement>
         <Link to="/faq">FAQ</Link>
       </HeaderElement>
       <HeaderElement>
-        <Link to="">Site in German</Link>
+        <a href="https://www.gisny.org">GISNY</a>
       </HeaderElement>
     </TheOneandOnlyTrueHeader>
   )
