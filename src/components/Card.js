@@ -26,9 +26,21 @@ const Back = styled(animated.div)`
   position: absolute;
   width: 100%;
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
   color: black;
-  overflow: scroll;
+  overflow-y: scroll;
+  li {
+    text-align: left;
+  }
+  & ::-webkit-scrollbar {
+    width: 10px;
+  }
+  & ::-webkit-scrollbar-track {
+    background: #111;
+  }
+  & ::-webkit-scrollbar-thumb {
+    background: white;
+  }
 `
 
 function Card({ front, back }) {

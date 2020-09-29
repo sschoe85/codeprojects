@@ -12,13 +12,12 @@ const StyledHeader = styled.header`
   background: var(--gradient);
   transition: all 0.7s ease-in;
   margin-bottom: 1rem;
-`
-const StyledScrolledHeader = styled(StyledHeader)`
   position: fixed;
   top: 0;
   left: 0;
   z-index: 999;
 `
+
 const HeaderElement = styled.div`
   padding: 0.7rem 0.2rem;
   display: flex;
@@ -36,26 +35,8 @@ const HeaderElement = styled.div`
 `
 
 const Header = props => {
-  const [scrolled, setScrolled] = React.useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY
-      if (offset > 200) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
-  let TheOneandOnlyTrueHeader = !scrolled ? StyledHeader : StyledScrolledHeader
-
   return (
-    <TheOneandOnlyTrueHeader>
+    <StyledHeader>
       <HeaderElement>
         <Link to="/">
           <img src={HomeIcon} alt="Home Icon" />{" "}
@@ -67,7 +48,7 @@ const Header = props => {
       <HeaderElement>
         <a href="https://www.gisny.org">GISNY</a>
       </HeaderElement>
-    </TheOneandOnlyTrueHeader>
+    </StyledHeader>
   )
 }
 export default Header

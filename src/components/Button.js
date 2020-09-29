@@ -13,8 +13,9 @@ const Button = styled.button`
   box-shadow: 2px 1000px 1px #111 inset;
   color: white;
   font-family: inherit;
-  padding: ${props => (props.size === "small" ? "0.3rem 1rem" : "0.5rem 3rem")};
-  font-size: calc(1rem + 1.5vw);
+  padding: ${props => (props.small ? "0.3rem 1rem" : "0.5rem 3rem")};
+  font-size: ${props => (props.small ? "1.2rem" : "calc(1rem + 1.5vw)")};
+  outline: none;
   & :hover {
     animation: pulse 3s;
     box-shadow: 0 0 0 2em rgba(#fff, 0);

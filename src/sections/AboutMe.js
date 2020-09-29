@@ -4,15 +4,8 @@ import SectionHeader from "../components/SectionHeader"
 import Video from "../components/Video"
 
 function AboutMe(props) {
-  const SectionAboutMe = styled.section`
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  `
-
   return (
-    <SectionAboutMe>
+    <section>
       <SectionHeader>About Me</SectionHeader>
       <Video
         title="About Me"
@@ -20,7 +13,7 @@ function AboutMe(props) {
         height="300px"
         videoSrcURL="https://www.youtube-nocookie.com/embed/Cz7Cy2Ed_tk"
       ></Video>
-    </SectionAboutMe>
+    </section>
   )
 }
 export default AboutMe
