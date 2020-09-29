@@ -5,7 +5,7 @@ import ParticlesBackground from "../components/ParticlesBackground"
 
 const ParticlesContainer = styled.div`
   width: 100vw;
-  height: 90vh;
+  height: 100vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ const WelcomeContainer = styled.div`
   flex-direction: column;
   background-color: transparent;
 
-  top: 20%;
+  top: 30%;
 
   & > h1 {
     text-align: center;
@@ -32,9 +32,9 @@ function Welcome() {
     <ParticlesContainer>
       <WelcomeContainer>
         <h1>CodeProjects @ GISNY </h1>
-        <a href="#Activities">
+        {/* <a href="#Activities">
           <Button>Activities</Button>
-        </a>
+        </a> */}
       </WelcomeContainer>
       <ParticlesBackground />
     </ParticlesContainer>

@@ -40,9 +40,14 @@ export default function GlobalStyles() {
         }
         li {
           margin: 1rem;
+          font-size: 1.1rem;
         }
         section {
           margin: 3rem 0rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
         }
       `}
     />
