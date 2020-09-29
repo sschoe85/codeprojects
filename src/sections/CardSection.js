@@ -58,7 +58,7 @@ function CardSection({ section }) {
         {nodes.map(node => (
           <Card
             key={node.frontmatter.front}
-            front={node.frontmatter.front}
+            front={{ __html: `${node.frontmatter.front}` }}
             back={{ __html: `${node.html}` }}
           />
         ))}

@@ -1,5 +1,5 @@
 ---
-title: Guest
+front: Guest
 section: FAQ
 ---
 
