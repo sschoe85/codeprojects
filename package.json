@@ -21,10 +21,12 @@
     "gatsby": "^2.24.54",
     "gatsby-cli": "^2.12.99",
     "gatsby-plugin-emotion": "^4.3.10",
+    "gatsby-plugin-react-helmet": "^3.3.12",
     "gatsby-source-filesystem": "^2.3.29",
     "gatsby-transformer-remark": "^2.8.34",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0",
     "react-spring": "^8.0.27",
     "react-tsparticles": "^1.17.10"
   },
