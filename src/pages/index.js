@@ -15,7 +15,6 @@ function IndexPage(props) {
           title
           author
           keywords
-          url
         }
       }
     }
@@ -27,7 +26,7 @@ function IndexPage(props) {
         <title>{data.site.siteMetadata.title}</title>
         <meta name="keywords" content={data.site.siteMetadata.keywords} />
         <meta name="author" content={data.site.siteMetadata.author} />
-        <link rel="canonical" href={data.site.siteMetadata.url} />
+        <link rel="canonical" href="www.code-projects.de" />
       </Helmet>
       <PageLayout>
         <Welcome />
