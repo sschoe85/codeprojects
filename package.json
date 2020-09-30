@@ -37,8 +37,6 @@
     "@storybook/addon-links": "^6.0.21",
     "@storybook/react": "^6.0.21",
     "babel-loader": "^8.1.0",
-    "chromatic": "^5.1.0",
-    "dotenv": "^8.2.0",
     "prettier": "2.1.1",
     "react-is": "^16.13.1"
   },
