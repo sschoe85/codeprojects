@@ -16,7 +16,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 20;
 `
 
 const HeaderElement = styled.div`
@@ -32,6 +32,8 @@ const HeaderElement = styled.div`
   }
   & > a > img {
     height: 4vh;
+    position: ${({ open }) => (open ? "fixed" : "relative")};
+    z-index: 50;
   }
 `
 
@@ -39,9 +41,14 @@ const Header = props => {
   const [open, setOpen] = useState(false)
   return (
     <StyledHeader>
-      <HeaderElement open={open} onClick={() => setOpen(!open)}>
+      <HeaderElement>
         <Link to="/">
-          <img src={HomeIcon} alt="Home Icon" />
+          <img
+            open={open}
+            onClick={() => setOpen(!open)}
+            src={HomeIcon}
+            alt="Home Icon"
+          />
         </Link>
       </HeaderElement>
       <Menu open={open} />
