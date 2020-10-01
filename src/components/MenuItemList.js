@@ -6,20 +6,21 @@ const Menu = styled.ul`
   list-style: none;
   display: flex;
 
-  border-right: 1.5px solid black;
+  border-right: 3.5px solid white;
 
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateX(-20%)" : "translateX(-130%)")};
   position: fixed;
   flex-flow: column nowrap;
-  background-color: pink;
+  background-color: var(--bg-color);
 
   top: 0;
   right: 0;
   height: 100%;
   width: 85%;
-
   z-index: 30;
+
+  padding-top: 15vh;
 `
 
 const MenuItemList = ({ open, children }) => {

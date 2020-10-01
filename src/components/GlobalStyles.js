@@ -11,6 +11,7 @@ export default function GlobalStyles() {
           --gradient: linear-gradient(101deg, #78e4ff, #ff48fa);
           --gradientSecondary: linear-gradient(to right, #f7ff00, #db36a4);
           --font-primary: "Finger Paint", cursive;
+          --bg-color: #111;
         }
         *,
         *:before,
@@ -20,7 +21,7 @@ export default function GlobalStyles() {
           margin: 0;
         }
         html {
-          background: #111;
+          background: var(--bg-color);
           color: #fff;
           font-family: "Solway", serif;
           scroll-behavior: smooth;

@@ -4,16 +4,19 @@ import { Link } from "gatsby"
 
 const MenuItemContainer = styled.li`
   margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
 
   > a {
     display: flex;
+    justify-content: center;
     padding: 0.6rem 0rem;
-    max-width: 90%;
+    width: 90%;
     align-items: center;
     text-decoration: none;
     border-radius: 10px;
-    border: 1.5px solid white;
-    box-shadow: 0.5px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    background: var(--gradient);
     font-family: var(--font-primary);
   }
 `
