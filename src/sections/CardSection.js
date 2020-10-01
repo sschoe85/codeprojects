@@ -41,6 +41,7 @@ function CardSection({ section }) {
             frontmatter {
               front
               section
+              number
             }
           }
         }
@@ -51,6 +52,7 @@ function CardSection({ section }) {
   const nodes = edges
     .map(edge => edge.node)
     .filter(node => node.frontmatter.section === section)
+    .sort((node1, node2) => node1.frontmatter.number - node2.frontmatter.number)
   return (
     <SectionContainer>
       <SectionHeader>{section}</SectionHeader>

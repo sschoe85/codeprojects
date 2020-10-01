@@ -1,4 +1,5 @@
 ---
+number: 1
 front: <h2>Codeprojects Junior</h2> <h2>Grades 5-8</h2>
 section: Activities
 ---

@@ -1,4 +1,5 @@
 ---
+number: 2
 front: <h2>Click on cards to see more</h2>
 section: Activities
 ---

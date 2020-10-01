@@ -5,11 +5,13 @@ export default function GlobalStyles() {
   return (
     <Global
       styles={css`
-        @import url("https://fonts.googleapis.com/css2?family=Solway:wght@300;400;500;700;800&family=Finger+Paint&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Solway:wght@400&family=Finger+Paint&display=swap");
 
         :root {
           --gradient: linear-gradient(101deg, #78e4ff, #ff48fa);
           --gradientSecondary: linear-gradient(to right, #f7ff00, #db36a4);
+          --font-primary: "Finger Paint", cursive;
+          --bg-color: #111;
         }
         *,
         *:before,
@@ -19,7 +21,7 @@ export default function GlobalStyles() {
           margin: 0;
         }
         html {
-          background: #111;
+          background: var(--bg-color);
           color: #fff;
           font-family: "Solway", serif;
           scroll-behavior: smooth;
@@ -29,7 +31,7 @@ export default function GlobalStyles() {
         h2,
         h3,
         h4 {
-          font-family: "Finger Paint", cursive;
+          font-family: var(--font-primary);
           text-align: center;
         }
         p {
