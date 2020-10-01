@@ -34,7 +34,7 @@ function Disclaimer(props) {
           <strong>Website</strong> refers to CodeProjects, accessible from{" "}
           <a
             href="www.code-projects.de"
-            rel="external nofollow noopener"
+            rel="external nofollow noopener noreferrer"
             target="_blank"
           >
             www.code-projects.de

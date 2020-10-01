@@ -1,6 +1,7 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
-import React, { useEffect } from "react"
+import React, { useState } from "react"
+import Menu from "../components/Menu"
 import HomeIcon from "../assets/homeIcon.svg"
 
 const StyledHeader = styled.header`
@@ -35,18 +36,26 @@ const HeaderElement = styled.div`
 `
 
 const Header = props => {
+  const [open, setOpen] = useState(false)
   return (
     <StyledHeader>
-      <HeaderElement>
+      <HeaderElement open={open} onClick={() => setOpen(!open)}>
         <Link to="/">
-          <img src={HomeIcon} alt="Home Icon" />{" "}
+          <img src={HomeIcon} alt="Home Icon" />
         </Link>
       </HeaderElement>
+      <Menu open={open} />
       <HeaderElement>
         <Link to="/faq">FAQ</Link>
       </HeaderElement>
       <HeaderElement>
-        <a href="https://www.gisny.org">GISNY</a>
+        <a
+          href="https://www.gisny.org"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          GISNY
+        </a>
       </HeaderElement>
     </StyledHeader>
   )

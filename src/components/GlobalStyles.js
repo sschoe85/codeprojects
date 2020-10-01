@@ -10,6 +10,7 @@ export default function GlobalStyles() {
         :root {
           --gradient: linear-gradient(101deg, #78e4ff, #ff48fa);
           --gradientSecondary: linear-gradient(to right, #f7ff00, #db36a4);
+          --font-primary: "Finger Paint", cursive;
         }
         *,
         *:before,
@@ -29,7 +30,7 @@ export default function GlobalStyles() {
         h2,
         h3,
         h4 {
-          font-family: "Finger Paint", cursive;
+          font-family: var(--font-primary);
           text-align: center;
         }
         p {
