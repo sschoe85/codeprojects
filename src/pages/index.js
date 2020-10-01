@@ -30,9 +30,9 @@ function IndexPage(props) {
       </Helmet>
       <PageLayout>
         <Welcome />
-        <Activities></Activities>
+        <Activities />
         <SignUp />
-        <AboutMe></AboutMe>
+        <AboutMe />
       </PageLayout>
     </>
   )
