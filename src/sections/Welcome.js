@@ -1,6 +1,5 @@
 import styled from "@emotion/styled"
 import React from "react"
-import Button from "../components/Button"
 import ParticlesBackground from "../components/ParticlesBackground"
 
 const ParticlesContainer = styled.div`

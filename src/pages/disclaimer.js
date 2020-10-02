@@ -62,6 +62,7 @@ function Disclaimer(props) {
         <a
           href="https://www.termsfeed.com/disclaimer-generator/"
           target="_blank"
+          rel="noreferrer"
         >
           Disclaimer Generator
         </a>
