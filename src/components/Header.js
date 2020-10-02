@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 import { Link } from "gatsby"
-import React, { useEffect } from "react"
+import React from "react"
 import HomeIcon from "../assets/homeIcon.svg"
 
 const StyledHeader = styled.header`
@@ -12,7 +12,7 @@ const StyledHeader = styled.header`
   background: var(--gradient);
   transition: all 0.7s ease-in;
   margin-bottom: 1rem;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 999;
@@ -43,7 +43,7 @@ const Header = props => {
         </Link>
       </HeaderElement>
       <HeaderElement>
-        <Link to="/faq">FAQ</Link>
+        <Link to="/projects">Projects</Link>
       </HeaderElement>
       <HeaderElement>
         <a href="https://www.gisny.org">GISNY</a>

@@ -1,4 +1,3 @@
-import styled from "@emotion/styled"
 import React from "react"
 import CardSection from "./CardSection"
 
