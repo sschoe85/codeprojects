@@ -6,6 +6,7 @@ import AboutMe from "../sections/AboutMe"
 import PageLayout from "../components/PageLayout"
 import SignUp from "../sections/SignUp"
 import { Helmet } from "react-helmet"
+import Events from "../sections/Events"
 
 function IndexPage(props) {
   const data = useStaticQuery(graphql`
@@ -33,6 +34,7 @@ function IndexPage(props) {
         <Activities></Activities>
         <SignUp />
         <AboutMe></AboutMe>
+        <Events></Events>
       </PageLayout>
     </>
   )

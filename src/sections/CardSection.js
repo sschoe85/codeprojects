@@ -1,5 +1,5 @@
 import React from "react"
-import Card from "../components/Card"
+import FlipCard from "../components/FlipCard"
 import styled from "@emotion/styled"
 import SectionHeader from "../components/SectionHeader"
 import { graphql, useStaticQuery } from "gatsby"
@@ -58,7 +58,7 @@ function CardSection({ section }) {
       <SectionHeader>{section}</SectionHeader>
       <Section>
         {nodes.map(node => (
-          <Card
+          <FlipCard
             key={node.frontmatter.front}
             front={{ __html: `${node.frontmatter.front}` }}
             back={{ __html: `${node.html}` }}
